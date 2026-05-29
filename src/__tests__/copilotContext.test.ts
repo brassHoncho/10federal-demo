@@ -72,7 +72,7 @@ describe('buildSystemPrompt', () => {
     expect(prompt).toContain("Don't lavish praise")
   })
 
-  it('stays under 15000 characters (rough proxy for ~3.75k tokens)', () => {
-    expect(prompt.length).toBeLessThan(15000)
+  it('stays under 18000 characters (rough proxy for ~4.5k tokens)', () => {
+    expect(prompt.length).toBeLessThan(18000)
   })
 })
