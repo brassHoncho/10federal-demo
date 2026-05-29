@@ -30,17 +30,18 @@ const STATUS_PILL: Record<Fund['status'], string> = {
 }
 
 const TRANSACTIONS = [
-  { id: 't1', date: '2026-04-12', kind: 'Acquisition', detail: '7-facility Arkansas portfolio · 10FSSAC3', amount: 18400000 },
-  { id: 't2', date: '2026-03-08', kind: 'Disposition', detail: '13 stabilized assets · 10FSSAC2 partial exit', amount: 62500000 },
-  { id: 't3', date: '2026-02-22', kind: 'Acquisition', detail: 'Single asset · Burien WA · 10FSSAC3', amount: 4750000 },
-  { id: 't4', date: '2026-01-30', kind: 'Capital call', detail: 'Opportunistic Offering Tranche 1', amount: 11000000 },
+  { id: 't1', date: '2026-01-27', kind: 'Acquisition', detail: 'Arkansas 7-facility portfolio (2,730 units, 487,652 NRSF) · 10FSSAC3', amount: 18400000 },
+  { id: 't2', date: '2025-08-13', kind: 'Disposition', detail: 'Mountaineer Village Apartments · Boone NC student housing · 6.03x equity multiple, 25.6% gross IRR (held 9.5 years)', amount: 68500000 },
+  { id: 't3', date: '2025-07-15', kind: 'Fundraise', detail: 'Opportunistic Offering Q2 add-on close · $150M target', amount: 28000000 },
+  { id: 't4', date: '2025-05-08', kind: 'Acquisition', detail: 'Keller TX 3-property portfolio (177,353 NRSF) · 10FSSAC4 · "significantly below replacement value"', amount: 16800000 },
+  { id: 't5', date: '2025-04-22', kind: 'Credit facility', detail: 'First Horizon Bank line · 10FSSAC4 acquisitions + Opportunistic dev', amount: 100000000 },
 ]
 
 const PIPELINE = [
-  { id: 'p1', target: 'Triad NC portfolio (4 facilities)', stage: 'Under LOI', proforma: 'IRR 16.8%', size: 32000000 },
-  { id: 'p2', target: 'Tampa FL urban infill', stage: 'Diligence', proforma: 'IRR 19.2%', size: 14500000 },
-  { id: 'p3', target: 'Memphis TN bolt-on (3 facilities)', stage: 'Sourced', proforma: 'IRR 14.5%', size: 21000000 },
-  { id: 'p4', target: 'Greenville SC Class-A development site', stage: 'Term sheet', proforma: 'IRR 17.3%', size: 27500000 },
+  { id: 'p1', target: 'Wisconsin bolt-on (Pewaukee adjacency, 3 facilities)', stage: 'Under LOI', proforma: 'IRR 16.2%', size: 14500000 },
+  { id: 'p2', target: 'Oklahoma City urban portfolio (2 facilities)', stage: 'Diligence', proforma: 'IRR 18.4%', size: 11200000 },
+  { id: 'p3', target: 'Suburban Atlanta Class-A development site', stage: 'Term sheet', proforma: 'IRR 17.1%', size: 31000000 },
+  { id: 'p4', target: 'Savannah GA bolt-on (Richmond Hill adjacency)', stage: 'Sourced', proforma: 'IRR 15.6%', size: 9800000 },
 ]
 
 export default function InvestmentsTab() {
@@ -60,7 +61,7 @@ export default function InvestmentsTab() {
       />
 
       <KpiStrip>
-        <KpiCard label="Total AUM" value={fmtCurrency(aum)} caption="3 funds · 17 states" />
+        <KpiCard label="Total AUM" value={fmtCurrency(aum)} caption="4 funds · 17 states · +$100M credit facility" />
         <KpiCard label="Active funds" value={activeFunds.toString()} caption="excludes closed-out vehicles" />
         <KpiCard label="Mezz outstanding" value={fmtCurrency(mezz)} caption="across active funds" />
         <KpiCard label="Capital deployed (cumulative)" value={fmtCurrency(capDeployedYTD)} caption={`across ${FUNDS.length} vehicles`} />
@@ -115,19 +116,19 @@ export default function InvestmentsTab() {
       </section>
 
       <section className="rounded-xl border border-amber-200 bg-amber-50/40 p-5">
-        <div className="flex items-baseline gap-3 mb-2">
+        <div className="flex items-baseline gap-3 mb-2 flex-wrap">
           <h3 className="text-base font-semibold">Opportunistic Offering — subscription tracker</h3>
-          <span className="text-xs text-amber-700">First close $25M · Targeting $40M total · Led by Essentia Capital Partners</span>
+          <span className="text-xs text-amber-700">Q3 2024 first close $25M + Q2 2025 add-on $28M · $150M target · Led by Essentia Capital Partners</span>
         </div>
         <div className="mt-3 h-3 rounded-full bg-amber-100 overflow-hidden">
-          <div className="h-full bg-amber-500" style={{ width: '62.5%' }} />
+          <div className="h-full bg-amber-500" style={{ width: '35.3%' }} />
         </div>
         <div className="flex justify-between text-xs text-amber-800 mt-1">
-          <span>$25M committed</span>
-          <span>$15M remaining</span>
+          <span>$53M committed</span>
+          <span>$97M remaining to target</span>
         </div>
         <p className="text-xs text-amber-800 mt-3">
-          Ground-up Class-A multi-story focus. Seeded Dripping Springs TX + Charlotte NC. Mezz equity tranche partially deployed; next tranche close projected Q3 2026.
+          Ground-up Class-A multi-story focus. Funding 8 named development sites including Georgetown TX (Q3 2025 CO), Dripping Springs TX, Charlotte NC, and the GA quartet (Richmond Hill, Villa Rica, Temple). Mezz equity tranche partially deployed; next tranche close projected Q3 2026.
         </p>
       </section>
 

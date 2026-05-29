@@ -40,7 +40,7 @@ describe('data shape contracts', () => {
   })
 
   it('funds.json matches FundSchema', () => {
-    expect(funds.length).toBe(3)
+    expect(funds.length).toBe(4)
     validateAll(funds, FundSchema, 'fund')
   })
 

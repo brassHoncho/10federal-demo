@@ -5,7 +5,7 @@ const ITEMS: { id: TabId; label: string; count?: number }[] = [
   { id: 'accounting', label: 'Accounting' },
   { id: 'operations', label: 'Operations', count: 130 },
   { id: 'marketing', label: 'Marketing' },
-  { id: 'investments', label: 'Investments', count: 3 },
+  { id: 'investments', label: 'Investments', count: 4 },
   { id: 'construction', label: 'Construction', count: 8 },
   { id: 'roadmap', label: 'Roadmap' },
   { id: 'settings', label: 'Settings' },

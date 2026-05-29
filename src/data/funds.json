@@ -17,17 +17,30 @@
     "name": "10 Federal Self Storage Acquisition Co. 3",
     "vintage": "2023",
     "raised": 7400000,
-    "deployedPct": 87,
+    "deployedPct": 97,
     "irr": 14.1,
     "noi": 1850000,
     "distributionsPaid": 740000,
     "mezzOutstanding": 1500000,
     "status": "active",
-    "notes": "Raised from 128 investors. Bolt-on portfolio expansion including the Jan 2026 Arkansas 7-facility deal (2,730 units, 487,652 NRSF)."
+    "notes": "15 operating facilities, 713,458 NRSF. Q1 2025: same-store revenue +9.0% YoY, NOI +45.1%, opex -12.8%. Includes Jan 2026 Arkansas 7-pack (2,730 units, 487,652 NRSF)."
+  },
+  {
+    "id": "10fssac4",
+    "name": "10 Federal Self Storage Acquisition Co. 4",
+    "vintage": "2024",
+    "raised": 28000000,
+    "deployedPct": 78,
+    "irr": 16.8,
+    "noi": 3100000,
+    "distributionsPaid": 0,
+    "mezzOutstanding": 0,
+    "status": "active",
+    "notes": "21 operating facilities. Q1 2025: same-store revenue +11.9% YoY, NOI +42.9%, opex -1.5%. Includes Keller TX 3-pack (177,353 NRSF), Magnolia TX + Montgomery TX expansions (650 units each). Backed by $100M First Horizon credit facility."
   },
   {
     "id": "opportunistic",
-    "name": "Opportunistic Offering (10FSSAC4)",
+    "name": "Opportunistic Offering",
     "vintage": "2024",
     "raised": 53000000,
     "deployedPct": 38,
@@ -36,6 +49,6 @@
     "distributionsPaid": 0,
     "mezzOutstanding": 4200000,
     "status": "fundraising",
-    "notes": "Q3 2024 first close $25M (led by Essentia Capital). Q2 2025 add-on $28M. Targeting $150M total. Ground-up Class-A multi-story focus. Funding 8 named development sites (Georgetown TX, Dripping Springs TX, Charlotte NC, Richmond Hill GA, Villa Rica GA, Temple GA, Lake Worth TX, plus pipeline). Backed by $100M First Horizon credit facility."
+    "notes": "Ground-up Class-A multi-story development vehicle. Q3 2024 first close $25M (led by Essentia Capital). Q2 2025 add-on $28M. Targeting $150M total. Funding 8 named development sites (Georgetown TX, Dripping Springs TX, Charlotte NC, Richmond Hill GA, Villa Rica GA, Temple GA, Lake Worth TX, plus pipeline)."
   }
 ]
