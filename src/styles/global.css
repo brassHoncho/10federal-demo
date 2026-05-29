@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-10f-bg text-10f-text font-sans; }
+}
