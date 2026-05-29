@@ -1,1 +1,139 @@
-[]
+[
+  {
+    "phase": 1,
+    "pillarNumber": 1,
+    "title": "Unified Network Operations Dashboard",
+    "summary": "Single source of truth across 130+ facilities, 5 sub-brands, and 3 funds. SiteLink revenue + GoHighLevel leads + QuickBooks ledger + Juniper Square investor data, normalized into one operational view.",
+    "steps": [
+      { "day": "Day 1-3", "description": "SiteLink API access via Brian + read-only ETL into a Postgres warehouse on Supabase. Schema: facilities, units, rentals, vacancies." },
+      { "day": "Day 4-7", "description": "GoHighLevel lead funnel sync — pipeline stages, per-facility routing, lead-source attribution." },
+      { "day": "Day 8-12", "description": "QuickBooks Online + Stessa revenue recognition tie-out. Sync to facility-level revenue rollup." },
+      { "day": "Day 13-17", "description": "Dashboard MVP shipped: Network KPIs, top/bottom leaderboard, brand-mix view, alert engine." },
+      { "day": "Day 18-22", "description": "Per-facility drill-down: occupancy curve, climate-control mix, RV/boat utilization, lead funnel per location." },
+      { "day": "Day 23-30", "description": "Alert rules engine — declining occupancy, lead SLA breach, sync lag, CPL spike — wired to Slack + email." },
+      { "day": "Day 31-45", "description": "Brand portfolio view — split-out for 10F Storage, Storage Depot, Big Guy, Carolina Secure, Self Storage Max." },
+      { "day": "Day 46-60", "description": "Investor-facing view: read-only dashboard slice for LPs, gated through Juniper Square SSO." },
+      { "day": "Day 61-75", "description": "Mobile-responsive layout. Capranos + Oakley check facility status from anywhere." },
+      { "day": "Day 76-90", "description": "Production hardening: monitoring, alerting, daily ETL health checks, on-call runbook." }
+    ]
+  },
+  {
+    "phase": 1,
+    "pillarNumber": 2,
+    "title": "Marketing Landing-Page Engine",
+    "summary": "Template-driven facility, market, and brand landing pages — every page SEO-targeted for local-pack searches. Per-facility deploy in hours, not weeks.",
+    "steps": [
+      { "day": "Day 1-3", "description": "Audit current site templates and information architecture. Inventory facility content gaps across 130 properties." },
+      { "day": "Day 4-7", "description": "Next.js + Vercel rebuild scaffold. Per-facility static generation, ISR for content updates." },
+      { "day": "Day 8-12", "description": "Facility detail page template — hero map, unit-mix selector, climate-control filter, rate display from SiteLink, schema.org LocalBusiness markup." },
+      { "day": "Day 13-17", "description": "Market hub pages (city + metro level). \"Storage in Raleigh\" / \"Storage in Houston\" type pages targeting metro-level intent." },
+      { "day": "Day 18-22", "description": "Brand landing pages — distinct identity per sub-brand. Storage Depot, Big Guy, Carolina Secure, Self Storage Max each get their own brand homepage." },
+      { "day": "Day 23-30", "description": "Conversion components: rent-now flow, contactless move-in CTA, hero image preconnect, mobile-first design." },
+      { "day": "Day 31-45", "description": "SEO: structured data, sitemap automation, internal linking optimization, Core Web Vitals pass — fix the INP and TTFB issues from the Day 1 Backlog." },
+      { "day": "Day 46-60", "description": "Per-facility content CMS — facility manager can update hours, amenities, photos without engineering." },
+      { "day": "Day 61-75", "description": "A/B test framework — hero copy, CTA variants, climate-control upsell. Wire to GoHighLevel attribution." },
+      { "day": "Day 76-90", "description": "New-facility playbook: launch a new acquisition's facility page in 4 hours from acquisition close." }
+    ]
+  },
+  {
+    "phase": 1,
+    "pillarNumber": 3,
+    "title": "Internal Tools Triage",
+    "summary": "Audit the top spreadsheets eating staff time across accounting, ops, marketing, investments, and construction. Replace the top 3 with purpose-built tools.",
+    "steps": [
+      { "day": "Day 1-5", "description": "Interview Trent, Cliff, Brad, and team — list every spreadsheet that's reviewed weekly. Score by hours-per-week × seniority of editor." },
+      { "day": "Day 6-10", "description": "Pick top 3 by ROI. Likely candidates: (a) acquisition pipeline tracker, (b) fund distribution calculator, (c) facility maintenance log." },
+      { "day": "Day 11-20", "description": "Tool 1 — acquisition pipeline. Replace spreadsheet with web app, Juniper Square sync, automated reminders." },
+      { "day": "Day 21-30", "description": "Tool 2 — distribution calculator. Pull NOI from QuickBooks, apply waterfall, generate LP statements automatically." },
+      { "day": "Day 31-45", "description": "Tool 3 — facility maintenance log. SiteLink-linked, mobile-friendly for on-site managers, photo upload, vendor dispatch." },
+      { "day": "Day 46-55", "description": "Permission model — role-based access aligned to org structure." },
+      { "day": "Day 56-65", "description": "Audit logs + change history. Every edit traceable for compliance." },
+      { "day": "Day 66-75", "description": "Migrate existing spreadsheet data. Archive sheets read-only." },
+      { "day": "Day 76-85", "description": "Train teams. Office hours every Friday for two weeks." },
+      { "day": "Day 86-90", "description": "Measure: hours saved per week, error rate before/after. Pick next 3 to replace in Phase 2." }
+    ]
+  },
+  {
+    "phase": 1,
+    "pillarNumber": 4,
+    "title": "Unified Customer Portal Layer",
+    "summary": "Today the flagship gets a white-labeled TenantConnect domain; the other 4 sub-brands show *.tenantconnect.com. Fix the inconsistency, fix the broken chat, establish the standard for every future acquisition.",
+    "steps": [
+      { "day": "Day 1-2", "description": "TenantConnect contract review — confirm white-label terms cover all 5 sub-brands. Resolve commercial blockers." },
+      { "day": "Day 3-5", "description": "CNAME setup: portal.storagedepot.com, portal.bigguystorage.com, portal.carolinasecurestorage.com, portal.selfstoragemax.com." },
+      { "day": "Day 6-10", "description": "Audit TenantConnect chat widget config across all 5 portals. Fix broken widget ID / DNS / chat provider misconfiguration." },
+      { "day": "Day 11-15", "description": "Default the portal landing to \"Existing Customers.\" Move Auction Buyer + Vendor/Employee links to secondary menu." },
+      { "day": "Day 16-22", "description": "Brand-specific theming per portal — distinct logo, color, hero image while sharing the TenantConnect backend." },
+      { "day": "Day 23-30", "description": "Customer-portal analytics: portal usage, payment success, chat resolution time. Wire to Mixpanel + Slack." },
+      { "day": "Day 31-45", "description": "Define the \"new acquisition portal onboarding\" runbook — every new portfolio plugs into the unified portal stack on close day." },
+      { "day": "Day 46-60", "description": "Self-service workflows: late-payment plan setup, unit transfer requests, gate code reset — all without phone calls." },
+      { "day": "Day 61-75", "description": "Inbound call deflection metrics — measure (910) call volume before / after. Target -30% within 90 days." },
+      { "day": "Day 76-90", "description": "Phase 2 prep: evaluate replacing TenantConnect with a custom portal if the per-tenant TC fees justify the build cost." }
+    ]
+  },
+  {
+    "phase": 2,
+    "pillarNumber": 5,
+    "title": "AI Agent Workforce",
+    "summary": "Per-department AI agents that take real action — not chatbots. Each agent owns a workflow, has tools, and reports outcomes. Aligned to Christopher Taylor's industry-first AI mandate.",
+    "steps": [
+      { "day": "Day 91-100", "description": "Agent infrastructure: orchestrator, tool registry, observability (Langfuse), eval framework. Anthropic Claude as base; OpenAI for fallback." },
+      { "day": "Day 101-115", "description": "Accounting agent — Trent's helper. Reconciles SiteLink revenue to QuickBooks daily, flags variances, drafts journal entries for review." },
+      { "day": "Day 116-130", "description": "Operations agent — Capranos's helper. Monitors per-facility KPIs, drafts daily ops report, escalates declining facilities." },
+      { "day": "Day 131-145", "description": "Marketing agent — drafts paid ad creative variations per market, A/B test reports, lead-to-rental funnel diagnostics." },
+      { "day": "Day 146-160", "description": "Investments agent — Cliff's helper. Drafts LOI summaries, pro forma comparisons, capital deployment recommendations." },
+      { "day": "Day 161-175", "description": "Construction agent — Cliff's other helper. Procore + ClickUp sync, milestone risk detection, capex pacing analysis." },
+      { "day": "Day 176-185", "description": "Human-in-the-loop UI — every agent action queued for review by the relevant owner before execution. No autonomous side effects until trust is built." },
+      { "day": "Day 186-200", "description": "MCP server exposing internal data to agents — facility data, fund data, construction data, with audit logging." },
+      { "day": "Day 201-215", "description": "Agent eval suite — does the accounting agent reconcile correctly? Run nightly against historical data, alert on regressions." },
+      { "day": "Day 216-225", "description": "Cost monitoring — token spend per agent per day. Cap budgets; alert on anomalies." }
+    ]
+  },
+  {
+    "phase": 2,
+    "pillarNumber": 6,
+    "title": "Construction Project Intelligence Layer",
+    "summary": "Cliff's construction projects (Dripping Springs, Charlotte, plus pipeline) need real-time pacing visibility. Procore + ClickUp + financial data into one project intelligence view.",
+    "steps": [
+      { "day": "Day 91-100", "description": "Procore API integration — pull milestone, RFI, change-order data per active build." },
+      { "day": "Day 101-110", "description": "ClickUp task sync — engineering and PM tasks linked to milestones." },
+      { "day": "Day 111-125", "description": "Capex burn dashboard — actual vs budget per project, monthly pace, days-to-CO trending." },
+      { "day": "Day 126-140", "description": "Schedule risk model — milestone variance triggers cascade analysis to CO date." },
+      { "day": "Day 141-155", "description": "Subcontractor performance tracking — change order rate, RFI resolution time, punch list quality." },
+      { "day": "Day 156-170", "description": "Pro forma actualization — feed actual lease-up performance back into next-project underwriting." },
+      { "day": "Day 171-180", "description": "Investor-facing construction view in Juniper Square — quarterly Class-A build updates." }
+    ]
+  },
+  {
+    "phase": 2,
+    "pillarNumber": 7,
+    "title": "Marketing ↔ Ops Feedback Loop",
+    "summary": "Close the loop between paid spend, lead generation, conversion, and per-facility occupancy. Today there are blind spots between ad spend and revenue impact.",
+    "steps": [
+      { "day": "Day 91-100", "description": "Attribution layer: GoHighLevel lead → SiteLink rental → QuickBooks revenue. UTM-stamped end-to-end." },
+      { "day": "Day 101-115", "description": "Per-market spend efficiency: CPL → CPA → LTV by city by brand by channel." },
+      { "day": "Day 116-130", "description": "Underperforming facility playbook — when occupancy drops, surface the marketing levers automatically (more paid spend, climate-controlled push, lease incentive)." },
+      { "day": "Day 131-145", "description": "Climate-controlled upsell engine — based on inventory + local weather + market demand, dynamic recommendation per facility." },
+      { "day": "Day 146-160", "description": "Lead routing intelligence — multi-touch, multi-facility, intent-based. SDR equivalent for self-storage." },
+      { "day": "Day 161-180", "description": "Quarterly marketing-ops review automation — generates Capranos-ready deck monthly." }
+    ]
+  },
+  {
+    "phase": 3,
+    "pillarNumber": 8,
+    "title": "Fund-Level Reporting Automation",
+    "summary": "Juniper Square is the LP-facing system of record. Quarterly investor reports, distribution statements, and K-1 prep are still manual. Automate the entire fund-reporting cycle.",
+    "steps": [
+      { "day": "Day 181-200", "description": "Juniper Square API integration — read fund metadata, LP positions, distribution history." },
+      { "day": "Day 201-220", "description": "Quarterly report generator — fund-level NOI, IRR, distributions paid, deployment status. Auto-drafts the narrative from data." },
+      { "day": "Day 221-240", "description": "Per-LP statement builder — capital account, contributions, distributions, current value." },
+      { "day": "Day 241-260", "description": "K-1 prep automation — pull from QuickBooks, allocate to LP positions, draft for CPA review." },
+      { "day": "Day 261-280", "description": "Capital call workflow — automated draft, DocuSign routing, Plaid-funded settlement." },
+      { "day": "Day 281-300", "description": "LP self-service portal — secure access to historical reports, distribution history, document archive." },
+      { "day": "Day 301-320", "description": "Fund-level AI agent — Cliff's third helper. Drafts LP comms, summarizes quarterly performance, flags reporting variances." },
+      { "day": "Day 321-345", "description": "Opportunistic Offering fundraising automation — drip campaigns, subscription tracking, accredited investor verification." },
+      { "day": "Day 346-360", "description": "Fund 4 launch playbook — every system, every report, every workflow productized for the next fund." },
+      { "day": "Day 361-365", "description": "Year-1 retrospective. Hours saved across accounting + investments. Cost per LP-touchpoint before / after." }
+    ]
+  }
+]

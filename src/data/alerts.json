@@ -1,1 +1,66 @@
-[]
+[
+  {
+    "id": "alert-1",
+    "severity": "warn",
+    "message": "TenantConnect chat widget down across 4 sub-brand portals — inbound calls trending +18% week-over-week",
+    "timestampMinutesAgo": 32,
+    "tab": "operations",
+    "askPrompt": "Walk me through how to restore the TenantConnect chat widget across all 5 sub-brand portals and what the unified-portal Phase-1 pillar would look like"
+  },
+  {
+    "id": "alert-2",
+    "severity": "critical",
+    "message": "Dripping Springs build pace -9% vs target. Punch list start risk: Q4 slip from Q3 ETA",
+    "timestampMinutesAgo": 64,
+    "tab": "construction",
+    "askPrompt": "What's the current punch list status on Dripping Springs and what's driving the build pace miss?"
+  },
+  {
+    "id": "alert-3",
+    "severity": "warn",
+    "message": "Carolina markets CPL up 24% MoM — Paid Ads spend efficiency dropping across Carolina Secure Storage portfolio",
+    "timestampMinutesAgo": 140,
+    "tab": "marketing",
+    "askPrompt": "Why is CPL up 24% across Carolina Secure Storage facilities this month and what should we shift in the paid ads mix?"
+  },
+  {
+    "id": "alert-4",
+    "severity": "info",
+    "message": "Arkansas 7-facility acquisition tracking +6% above pro forma occupancy after 90 days",
+    "timestampMinutesAgo": 220,
+    "tab": "investments",
+    "askPrompt": "Compare the Arkansas 7-facility acquisition's first-90-day occupancy vs the pro forma"
+  },
+  {
+    "id": "alert-5",
+    "severity": "warn",
+    "message": "10FSSAC2 distribution payout queue: 14 LPs pending Q2 distributions — Plaid sync issue suspected",
+    "timestampMinutesAgo": 290,
+    "tab": "accounting",
+    "askPrompt": "What's blocking the 10FSSAC2 Q2 distribution payouts and which 14 LPs are affected?"
+  },
+  {
+    "id": "alert-6",
+    "severity": "critical",
+    "message": "5 facilities >48hr behind on lead follow-up (Greenville NC, Hilliard FL, Macon GA, Tyler TX, Jefferson City MO)",
+    "timestampMinutesAgo": 8,
+    "tab": "operations",
+    "askPrompt": "Which facilities are behind on lead follow-up SLAs and what's the right routing fix?"
+  },
+  {
+    "id": "alert-7",
+    "severity": "info",
+    "message": "Charlotte NC build entered Permitting — capex deployment expected Q4 2026",
+    "timestampMinutesAgo": 480,
+    "tab": "construction",
+    "askPrompt": "What's the capex deployment plan for Charlotte NC over the next 6 months?"
+  },
+  {
+    "id": "alert-8",
+    "severity": "warn",
+    "message": "SiteLink → QuickBooks sync lag — 130 facilities, 4hr revenue recognition delay",
+    "timestampMinutesAgo": 12,
+    "tab": "accounting",
+    "askPrompt": "Why is the SiteLink → QuickBooks revenue recognition sync lagging and how do we automate the reconciliation?"
+  }
+]

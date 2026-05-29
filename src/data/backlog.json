@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "id": "fix-inp",
+    "number": 1,
+    "title": "Restore CWV \"good\" status — INP failing the 200ms threshold",
+    "description": "Audit main-thread JS on tap interactions. Defer the chat widget and analytics tags. Break long tasks. Likely culprits: third-party tags blocking the main thread on click handlers.",
+    "estimate": "~1-2 days",
+    "businessOutcome": "Failing INP is a confirmed Google ranking signal for mobile search. With 130+ facility pages competing in local-pack searches, every position matters.",
+    "evidence": "CrUX field data, 2026-05-29: p75 INP = 207ms (threshold for \"good\" = 200ms)."
+  },
+  {
+    "id": "cut-ttfb",
+    "number": 2,
+    "title": "Cut TTFB from 1170ms to <500ms",
+    "description": "Add Cloudflare full-page cache for marketing pages. If origin is the bottleneck, move closer to SE-US users (16-state Southeast-heavy portfolio).",
+    "estimate": "~4 hrs config / ~1 day if rearchitecting hosting",
+    "businessOutcome": "TTFB is 65% of the LCP budget. Halving it puts LCP comfortably under 1.5s — measurable lift in Google rankings and rental funnel conversion.",
+    "evidence": "CrUX field data, 2026-05-29: p75 TTFB = 1170ms (threshold for \"good\" = 800ms)."
+  },
+  {
+    "id": "deprecated-api",
+    "number": 3,
+    "title": "Replace deprecated browser API",
+    "description": "Lighthouse flagged 1 deprecation warning in the page's JS bundle. Identify and replace.",
+    "estimate": "~1 hr",
+    "businessOutcome": "Future-proofing — will eventually break.",
+    "evidence": "Lighthouse audit, 2026-05-29, mobile: best-practices score 81/100, 1 deprecation warning."
+  },
+  {
+    "id": "a11y-label-mismatch",
+    "number": 4,
+    "title": "Fix accessible-name mismatch on labeled element",
+    "description": "One element's visible text label doesn't match its accessible name (aria-label or alt). Causes screen-reader confusion.",
+    "estimate": "~30 min",
+    "businessOutcome": "Screen reader UX. Drops a Lighthouse failure.",
+    "evidence": "Lighthouse audit: label-content-name-mismatch failure."
+  },
+  {
+    "id": "fix-megamenu",
+    "number": 5,
+    "title": "Ship 5 Special Features detail pages",
+    "description": "Replace the dead megamenu links (24/7 Access, Security Systems, Contactless Move-In, Month-to-Month Lease, Online Management) with SEO-targeted detail pages.",
+    "estimate": "~1 day",
+    "businessOutcome": "Trust signals drive the rental decision. Today the links 404; tomorrow they're ranking for \"secure storage near me\" and similar long-tail queries.",
+    "evidence": "Manual audit of 10federalstorage.com/why-choose-10-federal-storage — all 5 Special Features links non-functional."
+  },
+  {
+    "id": "unify-portals",
+    "number": 6,
+    "title": "Unify customer portal experience across all 5 sub-brands",
+    "description": "Today the flagship (10 Federal Storage) is white-labeled at facility.10federalstorage.com; the other 4 still show *.tenantconnect.com URLs. Fix: (a) CNAMEs for Storage Depot / Big Guy / Carolina Secure / SS Max portals, (b) default landing to \"Existing Customers\" (move auction-buyer + vendor links to secondary menu), (c) fix broken chat widget config, (d) brand-specific theming.",
+    "estimate": "~3-5 days · lifts UX across 130+ properties",
+    "businessOutcome": "Customer portal friction = inbound call volume to the (910) number. Broken chat on a billing portal is a trust erosion signal across every billing cycle. One configuration sprint compounds across the entire portfolio — pure leverage.",
+    "evidence": "Manual portal audit, 2026-05-29: pixel-identical TenantConnect pages across all 5 sub-brands, only flagship has CNAME, chat widget non-functional on all."
+  }
+]

@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "id": "lead-1",
+    "inquiry": "Need a 10x10 climate-controlled near downtown Raleigh, moving in 2 weeks",
+    "channel": "Paid Ads",
+    "facilityId": "fac-67",
+    "minutesAgo": 4,
+    "propensity": "high",
+    "routing": "10 Federal Storage - Raleigh"
+  },
+  {
+    "id": "lead-2",
+    "inquiry": "RV storage Dripping Springs — quoted competitor at $145/mo, can you beat it?",
+    "channel": "Organic",
+    "facilityId": "fac-90",
+    "minutesAgo": 11,
+    "propensity": "high",
+    "routing": "10 Federal Storage - Dripping Springs"
+  },
+  {
+    "id": "lead-3",
+    "inquiry": "Need 5x10 for apartment overflow — June through August",
+    "channel": "Referrals",
+    "facilityId": "fac-58",
+    "minutesAgo": 23,
+    "propensity": "medium",
+    "routing": "10 Federal Storage - Durham"
+  },
+  {
+    "id": "lead-4",
+    "inquiry": "Walk-in: Boat storage off-season, asked about lighting/security",
+    "channel": "Walk-In",
+    "facilityId": "fac-69",
+    "minutesAgo": 38,
+    "propensity": "high",
+    "routing": "10 Federal Storage - Wilmington"
+  },
+  {
+    "id": "lead-5",
+    "inquiry": "Comparing 4 storage options in Round Rock — what makes 10F different?",
+    "channel": "Paid Ads",
+    "facilityId": "fac-105",
+    "minutesAgo": 52,
+    "propensity": "medium",
+    "routing": "10 Federal Storage - Round Rock"
+  },
+  {
+    "id": "lead-6",
+    "inquiry": "Small business inventory, 200 sqft, drive-up needed",
+    "channel": "Organic",
+    "facilityId": "fac-15",
+    "minutesAgo": 78,
+    "propensity": "high",
+    "routing": "Storage Depot - Dallas"
+  },
+  {
+    "id": "lead-7",
+    "inquiry": "Climate-controlled documents archive for law firm",
+    "channel": "Referrals",
+    "facilityId": "fac-66",
+    "minutesAgo": 110,
+    "propensity": "high",
+    "routing": "Carolina Secure Storage - Raleigh"
+  },
+  {
+    "id": "lead-8",
+    "inquiry": "College student moving home for summer, need May-Aug 5x5",
+    "channel": "Paid Ads",
+    "facilityId": "fac-48",
+    "minutesAgo": 145,
+    "propensity": "medium",
+    "routing": "10 Federal Storage - Greenville"
+  },
+  {
+    "id": "lead-9",
+    "inquiry": "Truck rental + storage combo — moving from Atlanta to Asheville",
+    "channel": "Organic",
+    "facilityId": "fac-117",
+    "minutesAgo": 200,
+    "propensity": "medium",
+    "routing": "10 Federal Storage - Asheville (recent acquisition)"
+  },
+  {
+    "id": "lead-10",
+    "inquiry": "Walk-in: Asked about contactless move-in and gate codes",
+    "channel": "Walk-In",
+    "facilityId": "fac-32",
+    "minutesAgo": 18,
+    "propensity": "high",
+    "routing": "10 Federal Storage - McDonough"
+  }
+]

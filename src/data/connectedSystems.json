@@ -1,1 +1,29 @@
-{}
+{
+  "accounting": [
+    { "name": "QuickBooks Online", "category": "GL", "lastSyncMinutesAgo": 4, "status": "ok", "metric": "$24.1M MTD" },
+    { "name": "Stessa", "category": "Real Estate Acctg", "lastSyncMinutesAgo": 11, "status": "ok" },
+    { "name": "Plaid", "category": "Bank Sync", "lastSyncMinutesAgo": 2, "status": "ok" }
+  ],
+  "operations": [
+    { "name": "SiteLink", "category": "Property Mgmt", "lastSyncMinutesAgo": 1, "status": "ok", "metric": "130 facilities live" },
+    { "name": "Janus International", "category": "Access Control", "lastSyncMinutesAgo": 3, "status": "ok" },
+    { "name": "Tenant Inc", "category": "Tenant Portal", "lastSyncMinutesAgo": 8, "status": "warn", "metric": "4 portals not white-labeled" }
+  ],
+  "marketing": [
+    { "name": "GoHighLevel", "category": "CRM", "lastSyncMinutesAgo": 2, "status": "ok", "metric": "1,242 leads MTD" },
+    { "name": "Google Ads", "category": "Paid", "lastSyncMinutesAgo": 14, "status": "ok" },
+    { "name": "Meta Ads", "category": "Paid", "lastSyncMinutesAgo": 14, "status": "ok" },
+    { "name": "GA4", "category": "Analytics", "lastSyncMinutesAgo": 61, "status": "ok" },
+    { "name": "Mailchimp", "category": "Email", "lastSyncMinutesAgo": 5, "status": "ok" }
+  ],
+  "investments": [
+    { "name": "Juniper Square", "category": "Investor Portal", "lastSyncMinutesAgo": 7, "status": "ok", "metric": "128 LPs" },
+    { "name": "DocuSign", "category": "Subscription Docs", "lastSyncMinutesAgo": 21, "status": "ok" },
+    { "name": "Plaid", "category": "Cap Calls", "lastSyncMinutesAgo": 2, "status": "ok" }
+  ],
+  "construction": [
+    { "name": "Procore", "category": "Project Mgmt", "lastSyncMinutesAgo": 9, "status": "ok" },
+    { "name": "ClickUp", "category": "Task Tracking", "lastSyncMinutesAgo": 4, "status": "ok" },
+    { "name": "BuilderTrend", "category": "Scheduling", "lastSyncMinutesAgo": 18, "status": "ok" }
+  ]
+}

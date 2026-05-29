@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "capranos",
+    "name": "Andrew Capranos",
+    "role": "President",
+    "ownsTabs": ["overview", "operations"],
+    "bio": "Leads strategic planning, operational oversight, and organizational growth."
+  },
+  {
+    "id": "brad-minsley",
+    "name": "Brad Minsley",
+    "role": "Co-Founder, Principal",
+    "ownsTabs": ["operations", "accounting"],
+    "bio": "Leads operations, finance, and technology development. 20+ years in real estate development and private equity."
+  },
+  {
+    "id": "cliff-minsley",
+    "name": "Cliff Minsley",
+    "role": "Co-Founder, Principal",
+    "ownsTabs": ["investments", "construction"],
+    "bio": "Leads investment functions including capital raising, corporate strategy, entitlement, financing, and construction."
+  },
+  {
+    "id": "christopher-taylor",
+    "name": "Christopher Taylor",
+    "role": "Chief AI Officer",
+    "ownsTabs": ["roadmap"],
+    "bio": "Leads artificial intelligence strategy, architecture, and development. The self-storage industry's first dedicated C-suite AI executive."
+  },
+  {
+    "id": "brian-oakley",
+    "name": "Brian Oakley",
+    "role": "Head of Technology",
+    "ownsTabs": ["operations", "roadmap"],
+    "bio": "Directs enterprise platforms, automation, and digital infrastructure."
+  },
+  {
+    "id": "trent-erickson",
+    "name": "Trent Erickson",
+    "role": "Head of Finance",
+    "ownsTabs": ["accounting"],
+    "bio": "Leads all accounting and finance functions."
+  }
+]

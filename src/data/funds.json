@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "id": "10fssac2",
+    "name": "10 Federal Self Storage Acquisition Co. 2",
+    "vintage": "2021",
+    "raised": 32000000,
+    "deployedPct": 100,
+    "irr": 18.4,
+    "noi": 12800000,
+    "distributionsPaid": 9200000,
+    "mezzOutstanding": 0,
+    "status": "closed",
+    "notes": "Oversubscribed at $32M. 26 acquisitions, 7,500+ units across the Southeast."
+  },
+  {
+    "id": "10fssac3",
+    "name": "10 Federal Self Storage Acquisition Co. 3",
+    "vintage": "2023",
+    "raised": 7400000,
+    "deployedPct": 87,
+    "irr": 14.1,
+    "noi": 1850000,
+    "distributionsPaid": 740000,
+    "mezzOutstanding": 1500000,
+    "status": "active",
+    "notes": "Raised from 128 investors. Bolt-on portfolio expansion."
+  },
+  {
+    "id": "opportunistic",
+    "name": "Opportunistic Offering",
+    "vintage": "2024",
+    "raised": 25000000,
+    "deployedPct": 42,
+    "irr": 0,
+    "noi": 0,
+    "distributionsPaid": 0,
+    "mezzOutstanding": 4200000,
+    "status": "fundraising",
+    "notes": "First close $25M, led by Essentia Capital Partners. Ground-up development focus — multi-story Class-A. Seeded Dripping Springs TX + Charlotte NC."
+  }
+]

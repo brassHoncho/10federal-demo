@@ -1,1 +1,12 @@
-[]
+[
+  { "id": "tmpl-1", "inquiry": "Need a 10x10 for moving boxes — 6 month minimum", "category": "Moving", "routedToFlagshipPct": 82, "lastSeenMinutesAgo": 18 },
+  { "id": "tmpl-2", "inquiry": "RV storage Houston — covered, year-round access", "category": "Vehicle/RV", "routedToFlagshipPct": 71, "lastSeenMinutesAgo": 47 },
+  { "id": "tmpl-3", "inquiry": "Climate-controlled wine collection 10x20", "category": "Climate-Controlled", "routedToFlagshipPct": 64, "lastSeenMinutesAgo": 92 },
+  { "id": "tmpl-4", "inquiry": "Boat storage Charlotte off-season", "category": "Vehicle/Boat", "routedToFlagshipPct": 88, "lastSeenMinutesAgo": 140 },
+  { "id": "tmpl-5", "inquiry": "Small business inventory overflow — 200 sqft", "category": "Business", "routedToFlagshipPct": 79, "lastSeenMinutesAgo": 8 },
+  { "id": "tmpl-6", "inquiry": "Apartment downsize — full 2BR contents", "category": "Moving", "routedToFlagshipPct": 91, "lastSeenMinutesAgo": 220 },
+  { "id": "tmpl-7", "inquiry": "Trailer storage long-term Texas", "category": "Vehicle/RV", "routedToFlagshipPct": 67, "lastSeenMinutesAgo": 360 },
+  { "id": "tmpl-8", "inquiry": "Climate-controlled documents archive — small unit", "category": "Climate-Controlled", "routedToFlagshipPct": 73, "lastSeenMinutesAgo": 480 },
+  { "id": "tmpl-9", "inquiry": "5x5 for college storage May–August", "category": "Seasonal", "routedToFlagshipPct": 95, "lastSeenMinutesAgo": 12 },
+  { "id": "tmpl-10", "inquiry": "Contractor materials staging — drive-up access required", "category": "Business", "routedToFlagshipPct": 84, "lastSeenMinutesAgo": 64 }
+]
