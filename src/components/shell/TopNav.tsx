@@ -36,7 +36,7 @@ export default function TopNav({ active, onChange }: Props) {
             >
               {it.label}
               {it.count !== undefined && (
-                <span className="ml-1.5 text-xs opacity-70">({it.count})</span>
+                <span className="ml-1.5 text-xs text-10f-text-muted">({it.count})</span>
               )}
             </button>
           )

@@ -1,0 +1,49 @@
+# 10F Ops Co-Pilot — Demo Dashboard
+
+> An operational dashboard for [10 Federal Storage](https://10federalstorage.com), built by [Sterling Mull](https://sterlingmull.com) as part of his application for the [Junior Software & AI Engineer role](https://to.indeed.com/aatpvzfpqcyw). The dashboard demonstrates the operating thesis: automation as multiplier — extending the 100-properties-with-<100-employees thesis into every department.
+
+## About
+
+- [Sterling Mull (candidate)](https://sterlingmull.com)
+- [10 Federal Companies (parent)](https://10fed.com)
+- [10 Federal Storage (operating brand)](https://10federalstorage.com)
+- [Indeed posting](https://to.indeed.com/aatpvzfpqcyw)
+
+## Tabs in this demo
+
+- [Overview](/#overview): Network leaderboard, KPI strip, brand-filtered revenue chart, alerts, recent rentals
+- [Accounting](/#accounting): Trent Erickson's close calendar, fund NOI tracking, SiteLink/QuickBooks reconciliation
+- [Operations](/#operations): Capranos/Oakley facility-level view, state occupancy heatmap, climate-control inventory
+- [Marketing](/#marketing): Channel performance, CPL by market, lead templates, brand portfolio split
+- [Investments](/#investments): Cliff Minsley's fund waterfall (10FSSAC2/3/Opportunistic), acquisition pipeline
+- [Construction](/#construction): Cliff Minsley's builds — Graham NC, Dripping Springs TX, Charlotte NC + pipeline kanban
+- [Roadmap](/#roadmap): Day 1 Backlog + 8-pillar phased roadmap with Christopher Taylor AI mandate attribution
+
+## Real data anchored
+
+- 130 facilities (114 from public site + 16 mocked recent acquisitions)
+- 3 fund vehicles: 10FSSAC2 ($32M, oversubscribed), 10FSSAC3 ($7.4M / 128 investors), Opportunistic Offering ($25M+ first close, led by Essentia Capital)
+- 3 real construction projects: Graham NC (completed, 155 units), Dripping Springs TX (Class-A multi-story, in flight), Charlotte NC (in flight)
+- 6 named executives: Andrew Capranos (President), Brad Minsley (Co-Founder), Cliff Minsley (Co-Founder), Christopher Taylor (Chief AI Officer), Brian Oakley (Tech), Trent Erickson (Finance)
+- Industry-standard tool integrations referenced: [SiteLink](https://www.sitelink.com), [Juniper Square](https://www.junipersquare.com), [Procore](https://www.procore.com), [GoHighLevel](https://www.gohighlevel.com), [QuickBooks Online](https://quickbooks.intuit.com)
+
+## Day 1 Backlog
+
+Real findings from a [Lighthouse audit](https://pagespeed.web.dev/) + manual portal walkthrough of [10federalstorage.com](https://10federalstorage.com) on 2026-05-29.
+
+1. Restore CWV "good" status — INP @ 207ms fails the 200ms threshold (field p75)
+2. Cut TTFB from 1170ms to <500ms via Cloudflare full-page cache
+3. Replace deprecated browser API (Lighthouse warning)
+4. Fix accessible-name mismatch on labeled element
+5. Ship 5 Special Features detail pages (replaces dead megamenu links)
+6. Unify customer portal across all 5 sub-brands (TenantConnect CNAME inconsistency across Carolina Secure Storage, Storage Depot, Big Guy Storage, Self Storage Max)
+
+## AI Co-Pilot
+
+The dashboard ships with a working AI Co-Pilot powered by [Anthropic Claude](https://www.anthropic.com). The per-tab system prompt is assembled from the real data above. Try it on any tab.
+
+## Contact
+
+- Personal site: [sterlingmull.com](https://sterlingmull.com)
+- Pattern source: [aesthetic.sterlingmull.com](https://aesthetic.sterlingmull.com)
+- Other portfolio demos: [noodle.sterlingmull.com](https://noodle.sterlingmull.com) · [cookunity.sterlingmull.com](https://cookunity.sterlingmull.com)

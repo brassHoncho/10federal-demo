@@ -16,9 +16,9 @@ type Props = {
 }
 
 const DEFAULT_COLORS = [
-  'text-indigo-500', 'text-sky-500', 'text-orange-500', 'text-cyan-500',
-  'text-emerald-500', 'text-violet-500', 'text-rose-500', 'text-amber-500',
-  'text-teal-500', 'text-fuchsia-500',
+  'text-indigo-700', 'text-sky-700', 'text-orange-700', 'text-cyan-700',
+  'text-emerald-700', 'text-violet-700', 'text-rose-700', 'text-amber-700',
+  'text-teal-700', 'text-fuchsia-700',
 ]
 
 export default function Leaderboard({ title, rows, accentColors = DEFAULT_COLORS, tone }: Props) {
@@ -43,7 +43,7 @@ export default function Leaderboard({ title, rows, accentColors = DEFAULT_COLORS
             {row.delta !== undefined && (
               <span
                 className={`tabular-nums text-xs font-medium w-12 text-right ${
-                  tone === 'down' || row.delta < 0 ? 'text-red-600' : 'text-green-600'
+                  tone === 'down' || row.delta < 0 ? 'text-red-700' : 'text-green-700'
                 }`}
               >
                 {fmtDelta(row.delta)}

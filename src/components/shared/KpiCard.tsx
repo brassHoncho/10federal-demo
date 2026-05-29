@@ -19,7 +19,7 @@ export default function KpiCard({ label, value, delta, deltaSuffix = '%', captio
         {delta !== undefined && (
           <span
             className={`text-xs font-medium tabular-nums ${
-              delta > 0 ? 'text-green-600' : delta < 0 ? 'text-red-600' : 'text-10f-text-muted'
+              delta > 0 ? 'text-green-700' : delta < 0 ? 'text-red-700' : 'text-10f-text-muted'
             }`}
           >
             {fmtDelta(delta, deltaSuffix)}

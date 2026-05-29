@@ -165,9 +165,8 @@ export default function CopilotDock({ activeTab }: Props) {
             type="button"
             onClick={() => setOpen(true)}
             className="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-10f-red text-white px-5 py-3 shadow-lg hover:bg-10f-red-dark font-medium text-sm"
-            aria-label="Open 10F Ops Co-Pilot"
           >
-            <span className="h-2 w-2 rounded-full bg-white" />
+            <span className="h-2 w-2 rounded-full bg-white" aria-hidden="true" />
             Ask 10F Ops Co-Pilot →
           </button>
         )}
