@@ -5,8 +5,8 @@ import executives from '../data/executives.json'
 import connectedSystems from '../data/connectedSystems.json'
 import backlog from '../data/backlog.json'
 import roadmap from '../data/roadmap.json'
-import type { Facility, Fund, ConstructionProject, Executive, BacklogItem, RoadmapPillar, ConnectedSystemsByTab } from './schemas'
-import { networkOccupancy, networkRevenue, totalUnits, totalAUM, byBrand, byState, constructionCapexCommitted } from './metrics'
+import type { Facility, Fund, ConstructionProject, Executive, BacklogItem, RoadmapPillar, ConnectedSystemsByTab } from './schemas.js'
+import { networkOccupancy, networkRevenue, totalUnits, totalAUM, byBrand, byState, constructionCapexCommitted } from './metrics.js'
 
 export type TabId = 'overview' | 'accounting' | 'operations' | 'marketing' | 'investments' | 'construction' | 'roadmap' | 'settings'
 

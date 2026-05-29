@@ -23,7 +23,7 @@ import {
   LeadTemplateSchema,
 } from '../lib/schemas'
 
-function validateAll<T>(rows: unknown[], schema: { safeParse: (x: unknown) => { success: boolean; error?: { issues: unknown[] } } }, name: string) {
+function validateAll(rows: unknown[], schema: { safeParse: (x: unknown) => { success: boolean; error?: { issues: unknown[] } } }, name: string) {
   rows.forEach((row, i) => {
     const result = schema.safeParse(row)
     if (!result.success) {

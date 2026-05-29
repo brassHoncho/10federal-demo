@@ -1,4 +1,4 @@
-import type { Facility, Fund, ConstructionProject } from './schemas'
+import type { Facility, Fund, ConstructionProject } from './schemas.js'
 
 /**
  * Network-weighted occupancy across all facilities — weighted by unit count.
