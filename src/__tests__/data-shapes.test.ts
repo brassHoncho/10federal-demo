@@ -45,7 +45,7 @@ describe('data shape contracts', () => {
   })
 
   it('construction.json matches ConstructionProjectSchema', () => {
-    expect(construction.length).toBeGreaterThanOrEqual(7)
+    expect(construction.length).toBeGreaterThanOrEqual(8)
     validateAll(construction, ConstructionProjectSchema, 'construction')
   })
 

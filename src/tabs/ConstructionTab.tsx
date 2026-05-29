@@ -38,10 +38,10 @@ const STAGE_DISPLAY: Record<ConstructionProject['stage'], { label: string; color
 }
 
 const SEED_PROMPTS = [
-  "What's the punch list status on Dripping Springs?",
-  "How does Graham NC's first-year occupancy compare to ground-up pro forma?",
+  "What's the punch list status on Georgetown TX heading into Q3 CO?",
+  "How does Graham NC's 2016 lease-up pace inform the Georgetown pro forma?",
   'Walk me through the Charlotte permitting timeline and what could slip it',
-  'Compare cost-per-sqft across Class-A multi-story vs single-story drive-up',
+  'Compare cost-per-sqft across our 4 active GA builds (Richmond Hill, Villa Rica, Temple, Savannah-area)',
   'Which pipeline sites should we cut from underwriting given current capital deployment?',
   'Draft a quarterly construction update for the Opportunistic Offering LPs',
 ]
@@ -76,7 +76,7 @@ export default function ConstructionTab() {
     <div className="flex flex-col gap-8">
       <SectionHeader
         title="Construction"
-        subtitle="Cliff's builds — Graham (completed), Dripping Springs + Charlotte (in flight), 4 more in pipeline."
+        subtitle="Cliff's builds — 15 active projects across development, construction, and planning (Q2 2025 release). 8 highlighted: Graham (industry benchmark) + Georgetown TX nearing CO + 4 GA/TX vertical builds + Charlotte + Lake Worth pipeline."
         ownedBy={{ name: 'Cliff Minsley', role: 'Co-Founder, Principal' }}
       />
 

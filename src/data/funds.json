@@ -10,7 +10,7 @@
     "distributionsPaid": 9200000,
     "mezzOutstanding": 0,
     "status": "closed",
-    "notes": "Oversubscribed at $32M. 26 acquisitions, 7,500+ units across the Southeast."
+    "notes": "Oversubscribed at $32M. 26 acquisitions, 7,500+ units across the Southeast. 13-asset partial exit reported Q1 2026."
   },
   {
     "id": "10fssac3",
@@ -23,19 +23,19 @@
     "distributionsPaid": 740000,
     "mezzOutstanding": 1500000,
     "status": "active",
-    "notes": "Raised from 128 investors. Bolt-on portfolio expansion."
+    "notes": "Raised from 128 investors. Bolt-on portfolio expansion including the Jan 2026 Arkansas 7-facility deal (2,730 units, 487,652 NRSF)."
   },
   {
     "id": "opportunistic",
-    "name": "Opportunistic Offering",
+    "name": "Opportunistic Offering (10FSSAC4)",
     "vintage": "2024",
-    "raised": 25000000,
-    "deployedPct": 42,
+    "raised": 53000000,
+    "deployedPct": 38,
     "irr": 0,
     "noi": 0,
     "distributionsPaid": 0,
     "mezzOutstanding": 4200000,
     "status": "fundraising",
-    "notes": "First close $25M, led by Essentia Capital Partners. Ground-up development focus — multi-story Class-A. Seeded Dripping Springs TX + Charlotte NC."
+    "notes": "Q3 2024 first close $25M (led by Essentia Capital). Q2 2025 add-on $28M. Targeting $150M total. Ground-up Class-A multi-story focus. Funding 8 named development sites (Georgetown TX, Dripping Springs TX, Charlotte NC, Richmond Hill GA, Villa Rica GA, Temple GA, Lake Worth TX, plus pipeline). Backed by $100M First Horizon credit facility."
   }
 ]
