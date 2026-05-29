@@ -4,7 +4,7 @@
 >
 > **Live:** [10federal.sterlingmull.com](https://10federal.sterlingmull.com)
 
-A 130-facility operational dashboard for [10 Federal Companies](https://10fed.com) — the Raleigh-headquartered, automation-first self-storage operator running 130+ facilities across 17 states with fewer than 100 employees. Built by [Sterling Mull](https://sterlingmull.com) in three working days using Claude Code as the primary build tool.
+A 130-facility operational dashboard for [10 Federal Companies](https://10fed.com) — the Raleigh-headquartered, automation-first self-storage operator running 130+ facilities across 17 states with fewer than 100 employees. Built by [Sterling Mull](https://sterlingmull.com) in four hours using Claude Code as the primary build tool.
 
 ## What's in here
 
@@ -21,7 +21,7 @@ React 19 · Vite 8 · TypeScript · Tailwind CSS 4 · Recharts · Vercel AI SDK 
 
 ## Build process
 
-The entire demo — every tab, every component, the streaming API route, the data layer, the seeded facility generator — was built using Claude Code as the primary build tool over three working days. The commit history walks through the actual build phases: scaffold → data layer → utility lib → shell → shared components → tabs → AI Co-Pilot → personalization polish → deploy.
+The entire demo — every tab, every component, the streaming API route, the data layer, the seeded facility generator — was built using Claude Code as the primary build tool over four hours. The commit history walks through the actual build phases: scaffold → data layer → utility lib → shell → shared components → tabs → AI Co-Pilot → personalization polish → deploy.
 
 50 unit tests passing. Lighthouse on the production build: Accessibility / Best Practices / SEO all 100.
 
