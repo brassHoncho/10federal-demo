@@ -5,6 +5,10 @@ import ChatInput from '../copilot/ChatInput'
 
 type Message = { role: 'user' | 'assistant'; content: string }
 
+type Props = {
+  activeTab: TabId
+}
+
 const CONVERSATION_STARTERS = [
   "Why should we be interested in Sterling specifically? Walk me through his fit for this role.",
   "Show me the Day 1 Backlog — what would he actually ship in week one and what's the evidence?",
@@ -14,9 +18,14 @@ const CONVERSATION_STARTERS = [
   "How was this demo built? What's the stack and how much of it was AI-augmented?",
 ]
 
-type Props = {
-  activeTab: TabId
-}
+const STARTER_LABELS = [
+  'About Sterling',
+  'Day 1 Backlog',
+  'NOI growth',
+  'AI workforce',
+  'Site + portal fixes',
+  'How was this built',
+]
 
 export default function CopilotDock({ activeTab }: Props) {
   const [open, setOpen] = useState(false)
@@ -27,12 +36,15 @@ export default function CopilotDock({ activeTab }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const abortRef = useRef<AbortController | null>(null)
 
-  // Open chat (and optionally pre-seed a prompt) when other components fire open-copilot.
+  // Open chat (and optionally pre-fire a starter) when other components dispatch open-copilot.
   useEffect(() => {
     const onOpen = (e: Event) => {
       setOpen(true)
       const detail = (e as CustomEvent<{ prompt?: string }>).detail
       if (detail?.prompt) {
+        // Pre-fill input rather than auto-fire for external triggers
+        // (those come from Ask Co-Pilot buttons on alerts, where the user is
+        // confirming the prompt — not picking a starter).
         setInput(detail.prompt)
       }
     }
@@ -40,24 +52,30 @@ export default function CopilotDock({ activeTab }: Props) {
     return () => window.removeEventListener('open-copilot', onOpen)
   }, [])
 
-  // Autoscroll on new content.
+  // Scroll-on-new-message-only. We only fire scrollIntoView when a NEW message
+  // is added (length changes) — NOT while the assistant is streaming content
+  // into the last message. That way the user can start reading at the top of
+  // a long response while the rest streams in below them.
   useEffect(() => {
     const el = scrollRef.current
-    if (el) el.scrollTop = el.scrollHeight
-  }, [messages, busy])
+    if (!el) return
+    el.scrollTop = el.scrollHeight
+    // Intentionally watching length only, not content of last message.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [messages.length])
 
-  async function send() {
-    const trimmed = input.trim()
-    if (!trimmed || busy) return
+  async function send(overrideText?: string) {
+    const raw = (overrideText ?? input).trim()
+    if (!raw || busy) return
 
-    const userMsg: Message = { role: 'user', content: trimmed }
+    const userMsg: Message = { role: 'user', content: raw }
     const nextMessages = [...messages, userMsg]
     setMessages(nextMessages)
     setInput('')
     setBusy(true)
     setError(null)
 
-    // Add an empty assistant message that we'll fill via streaming.
+    // Add an empty assistant placeholder we'll fill via streaming.
     setMessages((m) => [...m, { role: 'assistant', content: '' }])
 
     const ctrl = new AbortController()
@@ -75,7 +93,6 @@ export default function CopilotDock({ activeTab }: Props) {
         const errBody = await res.text()
         throw new Error(errBody || `HTTP ${res.status}`)
       }
-
       if (!res.body) throw new Error('No response stream')
 
       const reader = res.body.getReader()
@@ -96,7 +113,6 @@ export default function CopilotDock({ activeTab }: Props) {
       setError(msg)
       setMessages((m) => {
         const copy = [...m]
-        // Replace the empty assistant placeholder with the error
         copy[copy.length - 1] = { role: 'assistant', content: `[Couldn't reach the Co-Pilot. ${msg}]` }
         return copy
       })
@@ -104,6 +120,12 @@ export default function CopilotDock({ activeTab }: Props) {
       setBusy(false)
       abortRef.current = null
     }
+  }
+
+  function runStarter(text: string) {
+    // One click → fires the question. No second Send press needed.
+    if (busy) return
+    send(text)
   }
 
   function reset() {
@@ -118,7 +140,8 @@ export default function CopilotDock({ activeTab }: Props) {
     <div className="fixed bottom-0 inset-x-0 z-40 pointer-events-none">
       <div className="max-w-7xl mx-auto px-6 pb-4 flex justify-end">
         {open ? (
-          <div className="pointer-events-auto w-full md:w-[480px] max-h-[78vh] rounded-2xl border border-10f-border bg-white shadow-2xl flex flex-col overflow-hidden">
+          <div className="pointer-events-auto w-full md:w-[520px] max-h-[78vh] rounded-2xl border border-10f-border bg-white shadow-2xl flex flex-col overflow-hidden">
+            {/* Header */}
             <div className="flex items-center justify-between border-b border-10f-border px-4 py-3">
               <div className="flex items-center gap-2 min-w-0">
                 <span className={`h-2 w-2 rounded-full ${error ? 'bg-red-500' : 'bg-green-500'}`} />
@@ -146,25 +169,34 @@ export default function CopilotDock({ activeTab }: Props) {
               </div>
             </div>
 
+            {/* Persistent starter pills — visible the entire chat, BELOW the header
+                so they're always in view. Click any one → fires immediately. */}
+            <div className="border-b border-10f-border bg-red-50/40 px-3 py-2 overflow-x-auto shrink-0">
+              <div className="flex items-center gap-1.5 whitespace-nowrap">
+                <span className="text-xs font-medium text-10f-red px-1 shrink-0">Quick prompts:</span>
+                {STARTER_LABELS.map((label, i) => (
+                  <button
+                    key={label}
+                    type="button"
+                    onClick={() => runStarter(CONVERSATION_STARTERS[i])}
+                    disabled={busy}
+                    className="text-xs rounded-full border border-10f-red/40 bg-white text-10f-red hover:bg-10f-red hover:text-white px-3 py-1 transition-colors disabled:opacity-40 shrink-0 font-medium"
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Scrollable message area */}
             <div
               ref={scrollRef}
-              className="flex-1 overflow-y-auto p-3 flex flex-col gap-2 min-h-[200px]"
+              className="flex-1 overflow-y-auto p-3 flex flex-col gap-2 min-h-[260px]"
             >
               {messages.length === 0 ? (
-                <div className="flex flex-col gap-2 py-1 px-1">
-                  <div className="text-xs text-10f-text-muted px-2 mb-1">
-                    Start with one of these — or type your own.
-                  </div>
-                  {CONVERSATION_STARTERS.map((s) => (
-                    <button
-                      key={s}
-                      type="button"
-                      onClick={() => setInput(s)}
-                      className="text-left text-sm rounded-lg border border-10f-border bg-white hover:border-10f-red hover:bg-red-50/30 px-3 py-2 leading-snug transition-colors"
-                    >
-                      {s}
-                    </button>
-                  ))}
+                <div className="text-xs text-10f-text-muted px-2 py-6 text-center leading-relaxed">
+                  Pick a Quick Prompt above, type your own question below, or click any
+                  <span className="text-10f-red font-medium"> Ask Co-Pilot →</span> link on the dashboard.
                 </div>
               ) : (
                 messages.map((m, i) => <ChatMessage key={i} role={m.role} content={m.content} />)
@@ -185,7 +217,7 @@ export default function CopilotDock({ activeTab }: Props) {
             onClick={() => setOpen(true)}
             className="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-10f-red text-white px-5 py-3 shadow-lg hover:bg-10f-red-dark font-medium text-sm"
           >
-            <span className="h-2 w-2 rounded-full bg-white" aria-hidden="true" />
+            <span aria-hidden className="h-2 w-2 rounded-full bg-white" />
             Ask 10F Ops Co-Pilot →
           </button>
         )}
