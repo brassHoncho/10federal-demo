@@ -58,8 +58,21 @@ describe('buildSystemPrompt', () => {
     expect(constr).not.toContain("Trent Erickson's domain")
   })
 
-  it('stays under 12000 characters (rough proxy for ~3k tokens)', () => {
-    // Most system prompts target <3k tokens. 1 token ≈ 4 chars → 12000 char target.
-    expect(prompt.length).toBeLessThan(12000)
+  it('instructs the AI to flag illustrative data', () => {
+    expect(prompt).toContain('ILLUSTRATIVE')
+    expect(prompt).toContain('REAL')
+  })
+
+  it('instructs the AI on chart-block syntax for generative UI', () => {
+    expect(prompt).toContain('chart:bar')
+  })
+
+  it('keeps Sterling-praise discipline (no sycophancy)', () => {
+    expect(prompt).toContain('matter-of-fact')
+    expect(prompt).toContain("Don't lavish praise")
+  })
+
+  it('stays under 15000 characters (rough proxy for ~3.75k tokens)', () => {
+    expect(prompt.length).toBeLessThan(15000)
   })
 })
