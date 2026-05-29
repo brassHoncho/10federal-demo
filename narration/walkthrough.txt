@@ -1,0 +1,9 @@
+This is the 10F Ops Co-Pilot — a tailored dashboard Sterling Mull built in response to your Junior Software and AI Engineer post.
+
+A few things about Sterling. He's an independent AI and automation developer based in Raleigh — the same town as your headquarters. For the last three years he's been building production AI agent systems: four MCP servers with sixty plus tools, multiple Claude Code orchestration patterns, and AI-augmented operational dashboards for businesses that look a lot like 10 Federal. Before that, fifteen years as an e-commerce operator running real stores on Amazon, Etsy, and Shopify.
+
+Here's the reasoning behind the demo. Your JD reads as "first technical hire who owns the connective tissue across the operating company." That's the exact shape of work Sterling has been doing. Rather than send a generic resume, he built the dashboard he'd actually ship in week one — populated with your real facility data, your real fund vehicles, your real construction projects, and a real Day 1 Backlog sourced from a live Lighthouse audit plus a customer portal walkthrough across all five of your sub-brands.
+
+What this demonstrates. Sterling builds AI-native. The whole demo — every tab, every component, the streaming Anthropic Co-Pilot, the data layer — was built in roughly three working days using Claude Code as his primary build tool. That ratio matters. It mirrors your own operating thesis: a hundred properties run with fewer than a hundred employees because automation is the multiplier. Christopher Taylor's AI mandate. Brian Oakley's enterprise platform discipline. Andrew Capranos's full-stack operational view. Sterling is asking to ship in that lane.
+
+If anything here resonates: open the chat. Ask anything. Or reach Sterling directly at sterlingmull.com.

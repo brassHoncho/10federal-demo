@@ -5,6 +5,15 @@ import ChatInput from '../copilot/ChatInput'
 
 type Message = { role: 'user' | 'assistant'; content: string }
 
+const CONVERSATION_STARTERS = [
+  "Why should we be interested in Sterling specifically? Walk me through his fit for this role.",
+  "Show me the Day 1 Backlog — what would he actually ship in week one and what's the evidence?",
+  "Compare 10FSSAC3 and 10FSSAC4 same-store NOI growth — what does it tell us about the platform?",
+  "How would the AI agent workforce in Phase 2 extend our 100-properties-with-<100-employees thesis?",
+  "What's broken on our website and customer portal — and what's the recommended fix order?",
+  "How was this demo built? What's the stack and how much of it was AI-augmented?",
+]
+
 type Props = {
   activeTab: TabId
 }
@@ -142,10 +151,20 @@ export default function CopilotDock({ activeTab }: Props) {
               className="flex-1 overflow-y-auto p-3 flex flex-col gap-2 min-h-[200px]"
             >
               {messages.length === 0 ? (
-                <div className="text-xs text-10f-text-muted py-6 px-2 text-center">
-                  Ask about facilities, fund performance, builds, marketing — or click any{' '}
-                  <span className="text-10f-red font-medium">Ask Co-Pilot →</span> link
-                  to drop a seeded prompt into this box.
+                <div className="flex flex-col gap-2 py-1 px-1">
+                  <div className="text-xs text-10f-text-muted px-2 mb-1">
+                    Start with one of these — or type your own.
+                  </div>
+                  {CONVERSATION_STARTERS.map((s) => (
+                    <button
+                      key={s}
+                      type="button"
+                      onClick={() => setInput(s)}
+                      className="text-left text-sm rounded-lg border border-10f-border bg-white hover:border-10f-red hover:bg-red-50/30 px-3 py-2 leading-snug transition-colors"
+                    >
+                      {s}
+                    </button>
+                  ))}
                 </div>
               ) : (
                 messages.map((m, i) => <ChatMessage key={i} role={m.role} content={m.content} />)
