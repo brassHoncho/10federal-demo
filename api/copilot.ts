@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk'
-import { buildSystemPrompt, type TabId } from '../src/lib/copilotContext'
+import { buildSystemPrompt, type TabId } from '../src/lib/copilotContext.js'
 
 // Defaults to Claude Sonnet 4.5. Override via ANTHROPIC_MODEL env var to
 // upgrade to 4.6+ when available (or for A/B testing different model tiers).
@@ -13,11 +13,10 @@ type RequestBody = {
   activeTab: TabId
 }
 
-export default async function handler(req: Request): Promise<Response> {
-  if (req.method !== 'POST') {
-    return new Response('Method not allowed', { status: 405 })
-  }
-
+// Named POST export — Vercel's Node.js runtime uses this Web fetch-style API
+// when you export named HTTP methods. (Default exports use the legacy
+// (req, res) callback style and would ignore a returned Response.)
+export async function POST(req: Request): Promise<Response> {
   const apiKey = process.env.ANTHROPIC_API_KEY
   if (!apiKey) {
     return new Response(
@@ -79,6 +78,6 @@ export default async function handler(req: Request): Promise<Response> {
   })
 }
 
-export const config = {
-  runtime: 'nodejs',
+export function GET(): Response {
+  return new Response('POST only', { status: 405 })
 }

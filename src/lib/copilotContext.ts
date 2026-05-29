@@ -1,10 +1,10 @@
-import facilities from '../data/facilities.json'
-import funds from '../data/funds.json'
-import construction from '../data/construction.json'
-import executives from '../data/executives.json'
-import connectedSystems from '../data/connectedSystems.json'
-import backlog from '../data/backlog.json'
-import roadmap from '../data/roadmap.json'
+import facilities from '../data/facilities.json' with { type: 'json' }
+import funds from '../data/funds.json' with { type: 'json' }
+import construction from '../data/construction.json' with { type: 'json' }
+import executives from '../data/executives.json' with { type: 'json' }
+import connectedSystems from '../data/connectedSystems.json' with { type: 'json' }
+import backlog from '../data/backlog.json' with { type: 'json' }
+import roadmap from '../data/roadmap.json' with { type: 'json' }
 import type { Facility, Fund, ConstructionProject, Executive, BacklogItem, RoadmapPillar, ConnectedSystemsByTab } from './schemas.js'
 import { networkOccupancy, networkRevenue, totalUnits, totalAUM, byBrand, byState, constructionCapexCommitted } from './metrics.js'
 
